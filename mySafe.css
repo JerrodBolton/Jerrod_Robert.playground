@@ -1,25 +1,36 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 body {
-  color: #010101;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #000;
   font-family: 'Lato', sans-serif;
   padding: 1em;
   line-height: 1.5;
 }
 
 .flex {
-  background: #fdfdfd;
-  display: flex;
+  background:black; 
+  color:white;
+    display: flex;
   flex-wrap:wrap;
   justify-content: center;
   align-items:center;
   margin: 0 auto;
+  width:max-content;
   border-radius:5px;
+  box-shadow: 20px 20px 0px 0px silver,
+  30px 30px 0px 0px gray,
+  40px 40px 0px 0px grey,
+  50px 50px 0px 0px black;
+  
 }
 .element-center {
   display: flex;
   flex-direction:column;
   justify-content: center;
+  width:500px;
+  border:20px solid black;
+  border-radius:5px;
 }
 
 .typewrite {
@@ -44,7 +55,7 @@ button {
   font-size: .85em;
   padding: .65em 1em;
   border-radius: .3em;
-  outline: 0;
+  outline: .4rem solid silver;
 }
 input {
   border: 2px solid #dcdcdc;
@@ -53,9 +64,9 @@ input {
 
 button {
     color: white;
-    background: #508abc;
+    background:slateblue;
     border: solid 1px;
-    border-color: rgba(0, 0, 0, .1);
+    border-color: rgba(3, 0, 1, .1);
     cursor: pointer;
 }
 
@@ -63,6 +74,7 @@ label {
     font-size: 2em;
 }
 
-#btnDeposit, #btnWithdraw {
+#depositButton, #withdrawButton {
     width: 8em;
+    padding:20px;
 }

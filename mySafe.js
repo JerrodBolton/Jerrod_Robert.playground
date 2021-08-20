@@ -1,22 +1,21 @@
 // // alert("What is today")
+// user customization
+let userName = prompt('Hi, Welcome to the Safe Bank, What is your name?');
+let user = document.getElementById('userName');
+user.innerText = `${userName}'s Balance:`;
 
+// local storage borage....
 function getLocalStorage(){ 
     const moneyAmount = JSON.stringify(userWithdraw.value);
-
  localStorage.setItem("everyTransaction", moneyAmount);
-}
-
-
-
-
-
-// // I think that I need to make something to pass
+};
+ 
 
 // store all the deposits and withdrawals in arrays 
 const deposits = []; 
 const withdrawals = [];
 // initialize the total bance to 25
-let totalBalance = 25;
+let totalBalance =.5;
 // we start off with $25 so that we can make a withdraw inthe website 
 // we got all the elements  here so that it can be a global scopesk in the whole JavaScript
 const balanceLabel = document.getElementById("balanceLabel"); 
@@ -101,7 +100,7 @@ withdrawButton.addEventListener('click', () => {
     // print withdrawal to console to verify success
     console.log("$" + userWithdraw.value);
     return userWithdraw.value = '';
-    getLocalStorage();
+    
     }
 }
 });
@@ -130,7 +129,7 @@ document.getElementById("balanceLabel").innerHTML = totalBalanceFormatted;
 //     this.balance = balance;
 //     allAccount.push(this);
 //   }
-//   depositFunds = ($money,newBalance)=>{
+//   depositFunds = (newBalance)=>{
 //     if($money != null){
 // alert('please enter a valid deposit')
 //     } else if($money != 0 ){
