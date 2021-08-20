@@ -1,18 +1,45 @@
 // // alert("What is today")
 
-function getLocalStorage(){ 
-    const moneyAmount = JSON.stringify(userWithdraw.value);
+// function getLocalStorageWithdraw(){ 
+    
+//     console.log(withdraw);
+    
+//     const moneyAmount = JSON.stringify(withdraw);
 
- localStorage.setItem("everyTransaction", moneyAmount);
+//  localStorage.setItem("everyTransaction", moneyAmount);
+// }
+
+// function getUpdatedLS() {
+//     const oldData = localStorage.getItem("everyTransaction");
+  
+//     const  allTransaction = JSON.parse(oldData);
+//     // I put this here so that I can this can happen first.
+//     if (allTransaction !== null) {
+//         withdraw = allTransaction;
+//     }
+//     //  if the top Statement is false than this one what happened.
+//     else {
+//       console.log("The storage is ready to be looked at... ");
+//     }
+//   }
+//   // I put this here b/c  I want to call the function
+//   getUpdatedLS();
+
+
+let userName = prompt("what is your name");  
+
+function welcomeBack() {
+  document.write(`Welcome back, to your safe ${userName}!!`);
 }
 
-
-
+welcomeBack();
+ 
 
 
 // // I think that I need to make something to pass
 
 // store all the deposits and withdrawals in arrays 
+
 const deposits = []; 
 const withdrawals = [];
 // initialize the total bance to 25
@@ -60,6 +87,7 @@ depositButton.addEventListener('click', () => {
         deposits.push(Number(userDeposit.value));
         // calculate Total Balance
         totalBalance += (Number(userDeposit.value));
+        // 
 
         // format TotalBalance to show $ XX.XX (2 decimal places)
         let totalBalanceFormatted = $formatter.format(totalBalance);
@@ -87,12 +115,14 @@ withdrawButton.addEventListener('click', () => {
         if (userWithdraw.value > totalBalance - 5) {
             alert("Your total balance cannot drop below $5.");
             return userWithdraw.value = '';
-        } else {
+        } 
+        else {
 
         // push withdrawal to array
         withdrawals.push(Number(userWithdraw.value));
         // calculate Total Balance
         totalBalance -= (Number(userWithdraw.value));
+        getLocalStorageWithdraw();
 
         // format TotalBalance to show $ XX.XX (2 decimal places)
         let totalBalanceFormatted = $formatter.format(totalBalance);
@@ -101,8 +131,8 @@ withdrawButton.addEventListener('click', () => {
     // print withdrawal to console to verify success
     console.log("$" + userWithdraw.value);
     return userWithdraw.value = '';
-    getLocalStorage();
-    }
+      
+}
 }
 });
 
@@ -120,8 +150,7 @@ document.getElementById("balanceLabel").innerHTML = totalBalanceFormatted;
 
 // // this is where the user will input their name
 // 'use strict'
-// let userName = 
-// prompt("what is your name");
+// let userName = prompt("what is your name");
 // var allAccount = []; // we're store all accounts here
 
 // class Account {
