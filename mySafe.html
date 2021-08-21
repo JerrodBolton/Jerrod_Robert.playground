@@ -7,6 +7,7 @@
 <body>
  <img id="logo" src="img/logo.png" alt="logo" width="200px"> 
 
+<<<<<<< HEAD
 
     <nav>
            <a href="index.html">HOME</a> 
@@ -15,6 +16,18 @@
 
 
       
+=======
+    <nav id="nav">
+        <ul id="navItems">
+          <img id="logo" src="img/logo.png" alt="logo">
+          <li class="navItem"><a href="index.html">HOME</a></li>
+          <li class="navItem"><a href="">  My SAFES</a></li>
+          <!-- <li class="navItem"><a href="#">My Safe</a></li>
+          <li class="navItem"><a href="#">Contact</a></li> -->
+        </ul>
+      </nav>
+ <main id="main">
+>>>>>>> 1b4422a0d9641c355dd88296af2204cccfb32fd5
   <div class="flex">
   <div class="element-center">
     
@@ -22,7 +35,7 @@
         
             <span class="wrap"></span>
         </a>
-        <h1>
+        <h1 id='userName'>
            Your Total Balance Is:
         </h1>
         <label id="balanceLabel"></label>
@@ -32,18 +45,18 @@
         <h2>
             Deposit
         </h2>
-        <input type="text" id="userDeposit" required>
+        <input type="text" placeholder="Deposit $" id="userDeposit" required> 
         <button id="depositButton">Deposit</button>
-
         <h2>
             Withdraw
         </h2>
-        <input type="text" id="userWithdraw" required>
+        <input type="text" placeholder="Withdraw $" id="userWithdraw" required>
         <button id="withdrawButton">Withdraw</button>
     </div>
   </div>
   </div>
-
+</main>
+ 
 <script src="./mySafe.js"></script>
 
 
